@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умный холодильник</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Умный холодильник</h1>
+        <p>Ваш помощник в управлении продуктами</p>
+    </header>
+
+    <section id="main" class="section active">
+        <h2>Добро пожаловать!</h2>
+        <p>Используйте приложение для управления продуктами в вашем холодильнике. Сфотографируйте продукты, и ИИ поможет вам с рецептами и заказами.</p>
+        <button class="btn btn-primary nav-button" onclick="navigate('foto')">
+            <i class="fas fa-camera"></i> Управление продуктами 
+        </button>
+        <button class="btn btn-secondary nav-button" onclick="navigate('faq')">
+            <i class="fas fa-question-circle"></i> Что можно приготовить
+        </button>
+        <button class="btn btn-success nav-button" onclick="navigate('delivery')">
+            <i class="fas fa-shopping-cart"></i> Заказать продукты
+        </button>
+        <button class="btn btn-info nav-button" onclick="navigate('support')">
+            <i class="fas fa-headset"></i> Поддержка
+        </button>
+    </section>
+
+    <section id="instructions" class="section">
+        <h2>Инструкция по использованию</h2>
+        <p>1. Сделайте фото полки холодильника</p>
+        <p>2. Приложение автоматически распознает продукты и создаст список.</p>
+        <p>3. Сфотографируйте остальные полки холодильника и дождитесь добавления.</p>
+        <p>4. Если есть продукты, которые камера не находит, их можно добавить вручную.</p>
+        <p>5. После этого каждый день делайте новое фото холодильника для поддержания актуальной информации.</p>		
+        <button class="btn btn-primary nav-button" onclick="navigate('main')">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+    </section>
+	
+    <section id="foto" class="section">
+        <h2>Управление продуктами</h2>
+        <button class="btn btn-primary nav-button" onclick="navigate('instructions')">
+            <i class="fas fa-camera"></i> Сделать фото
+        </button>
+        <button class="btn btn-primary nav-button" onclick="navigate('main')">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+    </section>
+	
+    <section id="faq" class="section">
+        <h2>FAQ</h2>
+        <p><strong>Как улучшить качество распознавания?</strong><br>Используйте хорошее освещение и фотографируйте продукты под разными углами.</p>
+        <p><strong>Как заказать продукты?</strong><br>Перейдите в раздел "Заказать продукты" и выберите сервис доставки.</p>
+        <button class="btn btn-primary nav-button" onclick="navigate('main')">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+    </section>
+
+    <section id="delivery" class="section">
+        <h2>Заказать продукты</h2>
+        <p>Выберите сервис доставки:</p>
+        <a href="https://lavka.yandex.ru" class="btn btn-success nav-button">
+            <i class="fas fa-store"></i> Яндекс Лавка
+        </a>
+        <a href="https://sbermarket.ru" class="btn btn-success nav-button">
+            <i class="fas fa-store"></i> СберМаркет
+        </a>
+        <button class="btn btn-primary nav-button" onclick="navigate('main')">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+    </section>
+
+    <section id="support" class="section">
+        <h2>Поддержка</h2>
+        <p>Если у вас возникли вопросы или проблемы, свяжитесь с нами:</p>
+        <button class="btn btn-info nav-button" onclick="window.location.href='mailto:support@smartfridge.com'">
+            <i class="fas fa-envelope"></i> Написать в поддержку
+        </button>
+        <button class="btn btn-primary nav-button" onclick="navigate('main')">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Умный холодильник</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

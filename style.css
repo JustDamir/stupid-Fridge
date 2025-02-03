@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff2d0; /* Светлый фон для удобства глаз */
+    color: #4d4c37; /* Темный оттенок для текста */
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #4d4c37;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #907163;
+}
+
+/* Универсальный стиль кнопок */
+.nav-button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: #907163; /* Универсальный цвет кнопок */
+    color: white;
+    transition: none; /* Убрана анимация */
+}
+
+/* Иконки в кнопках */
+.nav-button i {
+    margin-right: 10px;
+}
+
+/* Отключаем изменение цвета и эффекты */
+.nav-button:hover,
+.nav-button:focus,
+.nav-button:active {
+    background-color: #907163 !important;
+    color: white !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Отключаем Bootstrap-эффекты */
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Секции */
+.section {
+    margin-bottom: 20px;
+    background-color: #b29a7e; /* Бежево-коричневый фон */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    color: white;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Подвал */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    background-color: #4d4c37;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+}
+
+/* Анимация появления секций */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
