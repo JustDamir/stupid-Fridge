@@ -37,22 +37,49 @@
         <p>2. Приложение автоматически распознает продукты и создаст список.</p>
         <p>3. Сфотографируйте остальные полки холодильника и дождитесь добавления.</p>
         <p>4. Если есть продукты, которые камера не находит, их можно добавить вручную.</p>
-        <p>5. После этого каждый день делайте новое фото холодильника для поддержания актуальной информации.</p>		
+        <p>5. После этого каждый день делайте новое фото холодильника для поддержания актуальной информации.</p>        
         <button class="btn btn-primary nav-button" onclick="navigate('main')">
             <i class="fas fa-arrow-left"></i> Назад
         </button>
     </section>
-	
+    
     <section id="foto" class="section">
         <h2>Управление продуктами</h2>
         <button class="btn btn-primary nav-button" onclick="navigate('instructions')">
             <i class="fas fa-camera"></i> Сделать фото
         </button>
+        <button class="btn btn-warning nav-button" onclick="navigate('view-products')">
+            <i class="fas fa-list"></i> Просмотр имеющихся продуктов
+        </button>
+        <button class="btn btn-success nav-button" onclick="navigate('add-products')">
+            <i class="fas fa-plus"></i> Добавить продукты вручную
+        </button>
         <button class="btn btn-primary nav-button" onclick="navigate('main')">
             <i class="fas fa-arrow-left"></i> Назад
         </button>
     </section>
-	
+
+    <section id="view-products" class="section">
+        <h2>Имеющиеся продукты</h2>
+        <p>Здесь будет список продуктов, распознанных приложением.</p>
+        <button class="btn btn-primary nav-button" onclick="navigate('foto')">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+    </section>
+
+    <section id="add-products" class="section">
+        <h2>Добавить продукты вручную</h2>
+        <p>Введите название продукта и его количество.</p>
+        <input type="text" class="form-control mb-2" placeholder="Название продукта">
+        <input type="number" class="form-control mb-2" placeholder="Количество">
+        <button class="btn btn-success nav-button">
+            <i class="fas fa-save"></i> Добавить
+        </button>
+        <button class="btn btn-primary nav-button" onclick="navigate('foto')">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+    </section>
+
     <section id="faq" class="section">
         <h2>FAQ</h2>
         <p><strong>Как улучшить качество распознавания?</strong><br>Используйте хорошее освещение и фотографируйте продукты под разными углами.</p>
