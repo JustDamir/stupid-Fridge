@@ -20,12 +20,15 @@
         <button class="btn btn-primary nav-button" onclick="navigate('foto')">
             <i class="fas fa-camera"></i> Управление продуктами 
         </button>
-        <button class="btn btn-secondary nav-button" onclick="navigate('faq')">
-            <i class="fas fa-question-circle"></i> Что можно приготовить
-        </button>
+
         <button class="btn btn-success nav-button" onclick="navigate('delivery')">
             <i class="fas fa-shopping-cart"></i> Заказать продукты
         </button>
+
+        <button class="btn btn-secondary nav-button" onclick="navigate('faq')">
+            <i class="fas fa-question-circle"></i> FAQ
+        </button>
+
         <button class="btn btn-info nav-button" onclick="navigate('support')">
             <i class="fas fa-headset"></i> Поддержка
         </button>
@@ -46,13 +49,10 @@
     <section id="foto" class="section">
         <h2>Управление продуктами</h2>
         <button class="btn btn-primary nav-button" onclick="navigate('instructions')">
-            <i class="fas fa-camera"></i> Сделать фото
+            <i class="fas fa-camera"></i> Загрузить фото
         </button>
         <button class="btn btn-warning nav-button" onclick="navigate('view-products')">
             <i class="fas fa-list"></i> Просмотр имеющихся продуктов
-        </button>
-        <button class="btn btn-success nav-button" onclick="navigate('add-products')">
-            <i class="fas fa-plus"></i> Добавить продукты вручную
         </button>
         <button class="btn btn-primary nav-button" onclick="navigate('main')">
             <i class="fas fa-arrow-left"></i> Назад
@@ -62,19 +62,6 @@
     <section id="view-products" class="section">
         <h2>Имеющиеся продукты</h2>
         <p>Здесь будет список продуктов, распознанных приложением.</p>
-        <button class="btn btn-primary nav-button" onclick="navigate('foto')">
-            <i class="fas fa-arrow-left"></i> Назад
-        </button>
-    </section>
-
-    <section id="add-products" class="section">
-        <h2>Добавить продукты вручную</h2>
-        <p>Введите название продукта и его количество.</p>
-        <input type="text" class="form-control mb-2" placeholder="Название продукта">
-        <input type="number" class="form-control mb-2" placeholder="Количество">
-        <button class="btn btn-success nav-button">
-            <i class="fas fa-save"></i> Добавить
-        </button>
         <button class="btn btn-primary nav-button" onclick="navigate('foto')">
             <i class="fas fa-arrow-left"></i> Назад
         </button>
@@ -106,7 +93,7 @@
     <section id="support" class="section">
         <h2>Поддержка</h2>
         <p>Если у вас возникли вопросы или проблемы, свяжитесь с нами:</p>
-        <button class="btn btn-info nav-button" onclick="window.location.href='mailto:support@smartfridge.com'">
+        <button class="btn btn-info nav-button" onclick="window.location.href='damir.prof.it@gmail.com'">
             <i class="fas fa-envelope"></i> Написать в поддержку
         </button>
         <button class="btn btn-primary nav-button" onclick="navigate('main')">
