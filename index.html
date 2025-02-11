@@ -132,12 +132,23 @@
             font-weight: bold;
             color: #333;
         }
+        header img {
+            width: 100px; /* Размер по умолчанию */
+            height: auto; /* Сохраняет пропорции */
+            border-radius: 12px; /* Закругленные углы */
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+
+        @media (max-width: 768px) {
+            header img {
+                width: 80px; /* Уменьшаем размер на мобильных устройствах */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Умный холодильник</h1>
-        <p>Ваш помощник в управлении продуктами</p>
+        <img src="logo.png" alt="Логотип Умный холодильник" style="width: 150px; height: 150px;">
     </header>
 
     <section id="main" class="section active">
