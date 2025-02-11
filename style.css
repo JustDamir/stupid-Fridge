@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff2d0; /* Светлый фон для удобства глаз */
-    color: #4d4c37; /* Темный оттенок для текста */
+    background-color: #FFFFFF;
+    color: #fd5e00;
     padding: 20px;
     margin: 0;
     text-align: center;
@@ -15,13 +15,13 @@ header {
 
 header h1 {
     font-size: 1.8rem;
-    color: #4d4c37;
+    color: #fddb09;
     margin-bottom: 5px;
 }
 
 header p {
     font-size: 1rem;
-    color: #907163;
+    color: #fd5e00;
 }
 
 /* Универсальный стиль кнопок */
@@ -37,9 +37,9 @@ header p {
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    background-color: #907163; /* Универсальный цвет кнопок */
+    background-color: #f5cd08;
     color: white;
-    transition: none; /* Убрана анимация */
+    transition: none;
 }
 
 /* Иконки в кнопках */
@@ -47,11 +47,11 @@ header p {
     margin-right: 10px;
 }
 
-/* Отключаем изменение цвета и эффекты */
+/* Убираем ховеры и любые эффекты наведения */
 .nav-button:hover,
 .nav-button:focus,
 .nav-button:active {
-    background-color: #907163 !important;
+    background-color: #f5cd08 !important;
     color: white !important;
     box-shadow: none !important;
     transform: none !important;
@@ -67,13 +67,13 @@ header p {
 /* Секции */
 .section {
     margin-bottom: 20px;
-    background-color: #b29a7e; /* Бежево-коричневый фон */
+    background-color: #e0e0e0;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: none;
     animation: fadeIn 0.5s ease-in-out;
-    color: white;
+    color: black;
 }
 
 .section.active {
@@ -84,7 +84,7 @@ header p {
 footer {
     margin-top: 20px;
     font-size: 0.9rem;
-    background-color: #4d4c37;
+    background-color: #fd5e00;
     padding: 10px;
     border-radius: 12px;
     color: white;
