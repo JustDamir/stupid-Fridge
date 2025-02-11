@@ -48,7 +48,8 @@
     
     <section id="foto" class="section">
         <h2>Управление продуктами</h2>
-        <button class="btn btn-primary nav-button" onclick="navigate('instructions')">
+        <input type="file" id="file-input" accept="image/*" style="display: none;">
+        <button class="btn btn-primary nav-button" onclick="document.getElementById('file-input').click()">
             <i class="fas fa-camera"></i> Загрузить фото
         </button>
         <button class="btn btn-warning nav-button" onclick="navigate('view-products')">
@@ -57,6 +58,7 @@
         <button class="btn btn-primary nav-button" onclick="navigate('main')">
             <i class="fas fa-arrow-left"></i> Назад
         </button>
+        <div id="image-preview" style="margin-top: 20px;"></div>
     </section>
 
     <section id="view-products" class="section">
@@ -105,6 +107,27 @@
         <p>&copy; 2025 Умный холодильник</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function navigate(sectionId) {
+            // Скрываем все разделы
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Показываем выбранный раздел
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        document.getElementById('file-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imagePreview = document.getElementById('image-preview');
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Загруженное фото" style="max-width: 100%; border-radius: 12px;">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>
